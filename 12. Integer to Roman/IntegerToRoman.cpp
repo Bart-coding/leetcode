@@ -24,7 +24,6 @@ public:
                 convertedNumber.insert(0,actualLastDigit,romanSymbols[i][0]);
                 else if (actualLastDigit == 4)
                 {
-                	//convertedNumber.insert(0,romanSymbols[i]); //-> b³¹d, bierze wszystkie romanSymbols
                     convertedNumber.insert(0,1,romanSymbols[i][1]);
                     convertedNumber.insert(0,1,romanSymbols[i][0]);
                 }
