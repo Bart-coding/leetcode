@@ -23,7 +23,8 @@ public:
             {
                 if (reversedX >= INT_MIN/10.0) //is it possible to multiply reversedX by 10
                     reversedX = reversedX*10 + x%10;
-                else return 0;
+                else 
+					return 0;
             }
             
             x = x/10;
