@@ -28,17 +28,17 @@ public:
             {
                 finalNumber+= nextSymbol - actualSymbol;
                 
-                if (i+2<s.length())
+                if (i<s.length()-2)
                     nextSymbol = romanSymbolsMap[s.at(i+2)];
                 i++;
                 
-                continue; //it 'means' i+=2;
+                continue;
             }
             
             finalNumber+= actualSymbol;
         }
         
-        if (i==s.length()-1) //there is an unused symbol
+        if (i==s.length()-1) //is there an unused symbol
             finalNumber+= nextSymbol;
         
         
