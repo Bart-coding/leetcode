@@ -40,7 +40,7 @@ public:
                 }
             }
             
-            i++;
+            ++i;
         }
         
         return convertedNumber;
