@@ -2,20 +2,21 @@ class Solution {
 public:
     vector<int> twoSum(vector<int>& nums, int target) {
         vector<int> twoNumsIndices;
-        map<int, int> map;
+        map<int, int> numsMap;
         
-        for (int i = 0; i < nums.size(); ++i)
+        numsMap[nums[0]] = 0;
+        for (int i = 1; i < nums.size(); ++i)
         {
             int diff = target - nums[i];
-            auto it = map.find(diff);
+            auto it = numsMap.find(diff);
             
-            if (it != map.end())
+            if (it != numsMap.end())
             {
                 twoNumsIndices.push_back(i);
                 twoNumsIndices.push_back(it->second);
                 return twoNumsIndices;
             }
-            map[nums[i]] = i;
+            numsMap[nums[i]] = i;
         }
                             
         return twoNumsIndices;                                          
