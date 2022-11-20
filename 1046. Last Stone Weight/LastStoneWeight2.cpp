@@ -5,21 +5,15 @@ public:
         {
             auto maxEl_Iterator = std::max_element(stones.begin(), stones.end());
             int stoneY = *maxEl_Iterator;
-            int yIndex = std::distance(stones.begin(), maxEl_Iterator);
-            stones.erase(stones.begin()+yIndex);
+            stones.erase(maxEl_Iterator);
             
             maxEl_Iterator = std::max_element(stones.begin(), stones.end());
             int stoneX = *maxEl_Iterator;
             
             if (stoneX == stoneY)
-            {
-                int xIndex = std::distance(stones.begin(), maxEl_Iterator);
-                stones.erase(stones.begin()+xIndex);
-            }
+                stones.erase(maxEl_Iterator);
             else
-            {
                 *maxEl_Iterator = stoneY - stoneX;
-            }
         }
         
         if (stones.size() == 0)
