@@ -11,8 +11,7 @@ public:
         
         unordered_map<char, int> foundLettersMap;
         int foundLetters = 0;
-        int pLength = p.length();
-        for (int i = 0; i < pLength; ++i) //initializing sliding window
+        for (int i = 0; i < p.length(); ++i) //initializing sliding window
         {
             if(pLettersMap.find(s[i]) != pLettersMap.end())
             {
@@ -23,7 +22,8 @@ public:
         }
         if (foundLetters == pLength)
             anagramsIndexes.push_back(0);
-            
+        
+        int pLength = p.length();
         for (int i = pLength; i < s.length(); ++i) //sliding the window
         {
             char letterToRemove = s[i - pLength]; //letter before the window range
