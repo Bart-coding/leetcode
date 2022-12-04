@@ -1,22 +1,16 @@
 class Solution {
 public:
     bool isValid(string s) {
-        std::unordered_set<char> bracketOpenings = {'(','{','['};
+        std::unordered_map<char,char> brackets = {{'(',')'},{'{','}'},{'[',']'}};
         std::stack<char> bracketsStack;
         
         for (char c : s)
         {
-            if (bracketOpenings.find(c) != bracketOpenings.end())
-                bracketsStack.push(c);
+            if (brackets.find(c) != brackets.end())
+                bracketsStack.push(brackets[c]);
             else
             {
-                char bracketOpening;
-                if (c == ')')
-                    bracketOpening = '(';
-                else
-                    bracketOpening = (char) (c-2); //ASCII
-                
-                if (bracketsStack.empty() || bracketsStack.top() != bracketOpening)
+                if (bracketsStack.empty() || c != bracketsStack.top())
                     return false;
                 bracketsStack.pop();
             }
