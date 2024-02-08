@@ -1,0 +1,1 @@
+Just find the length of the longest path in the binary tree that makes a zigzag: left child -> right child -> left child etc. or right child -> left child -> right child etc.
