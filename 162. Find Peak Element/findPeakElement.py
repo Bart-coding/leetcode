@@ -18,6 +18,6 @@ class Solution:
                 return mid
             if not greater_than_prev:
                 right = mid - 1
-            elif not greater_than_next:
+            else:
                 left = mid + 1
         return left
