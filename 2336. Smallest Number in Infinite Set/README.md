@@ -10,3 +10,8 @@
 
 * 1 <= num <= 1000
 * At most 1000 calls will be made in total to popSmallest and addBack.
+
+## My solutions:
+
+1. array
+2. (unordered) set
