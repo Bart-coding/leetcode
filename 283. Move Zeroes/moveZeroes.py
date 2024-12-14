@@ -4,7 +4,6 @@ class Solution:
         Do not return anything, modify nums in-place instead.
         """
 
-        first_zero_idx = -1
         try:
             first_zero_idx = nums.index(0)
         except ValueError:
